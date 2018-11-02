@@ -1,2 +1,2 @@
-# Techdegree-Project-8
-SQL Library Manager
+# Techdegree Project 8
+Setting up project 8

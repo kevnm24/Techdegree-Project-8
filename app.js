@@ -4,7 +4,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var connect = require('connect')
-var router = express.Router();
 
 var routes = require('./routes/index');
 
@@ -21,9 +20,7 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public'))
 
 app.use('/', routes)
-router.get('/books/new', function (req, res, next) {
-  res.render('new-book')
-})
+
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   var err = new Error('Not Found');

@@ -8,6 +8,7 @@ router.get('/books/new', function (req, res, next) {
   res.render('new-book')
 })
 
+module.exports = router;
 // // POST create book
 // router.post('/', function(req, res, next) {
 //   Book.create(req.body).then(function(book) {

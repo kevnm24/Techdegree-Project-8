@@ -5,7 +5,7 @@ const Book = require('../models').Book;
 
 // add new book form
 router.get('/books/new', function (req, res, next) {
-  res.render('new-book', { book: Book.build(), title: "New Book" })
+  res.render('new-book')
 })
 
 // // POST create book

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Book = require("../models").Book;
+const Book = require('../models').Book;
 
 // Get books listing
 router.get('/', function(req, res, next) {
@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
   Book.create(req.body).then(function(book) {
     res.redirect('/books');
   }).catch(function(err) {
-    if(err.name === "SequelizeValidationError") {
+    if(err.name === 'SequelizeValidationError') {
       res.render('new-book', {
         book: Book.build(req.body),
         errors: err.errors
@@ -45,7 +45,7 @@ router.post('/:id', function(req, res, next) {
   }).then(function(book) {
     res.redirect('/books')
   }).catch(function(err) {
-    if(err.name === "SequelizeValidationError") {
+    if(err.name === 'SequelizeValidationError') {
       var book = Book.build(req.body)
       book.id = req.params.id
       res.render('update-book', {
